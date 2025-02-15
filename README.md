@@ -1,0 +1,2 @@
+# cursd-blog
+cursed-blog
