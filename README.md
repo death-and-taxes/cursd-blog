@@ -7,4 +7,8 @@ How to open for testing:
 
 $ source venv/bin/activate
 
-2
+2. export flask
+$ export FLASK_APP=cursd-blog.py
+
+3. run flask
+$ flask run

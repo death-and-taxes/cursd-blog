@@ -17,7 +17,10 @@ def index():
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
+
+
 """
+Before /templates/ was created, this is what was on this page.
     return '''
 <html>
     <head>

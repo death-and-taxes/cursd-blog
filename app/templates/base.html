@@ -1,0 +1,17 @@
+<!-- This template serves as the "base" of all the others. Hence the name-->
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+        <title> {{ title }} - Cursd-blog</title>
+        {% else %}
+        <title>Welcome to Cursd-blog</title>
+        {% endif %}
+    </head>
+    <body>
+<!-- The following section is where other -->
+        <div>Cursd-blog: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
