@@ -17,6 +17,19 @@
         
         </div>
         <hr>
+<!-- 'With' construct assigns get_flashed_messages() -->
+ <!-- get_flashed_messages() comes from Flask, returns all messages registered w/ flash() -->
+  <!-- once flashed messages are requested, they are removed from the messages list. 
+   Therefore they only appear once after flash() is called-->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li> {{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </body>
 </html>
