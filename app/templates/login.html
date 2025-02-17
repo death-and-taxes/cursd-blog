@@ -1,12 +1,19 @@
 <!-- Uses forms.py to build login page-->
+ <!-- This template requires a form object to work-->
 
 {% extends "base.html" %}
 
 {% block content %}
     <h1>Sign In</h1>
+    <!-- action = "" browser will submit the form to the URL in the address bar-->
+    <!-- method="post", 'get' would also work. But 'get' would meant the 
+     browser submits the form fields added onto the URL. Post is better for ux-->
     <form action = "" method="post" novalidate>
+        <!-- form.hidden_tag() generates hidden feild w/ token to protect against CSRF attacks. 
+        By including this hidden field and having a SECRET_KEY variable(see config.py) we are more secure -->
         {{ form.hidden_tag() }}
         <p>
+        <!-- additional html attributes can be passed as arguements, for example 'size=32' is one such attribute-->
             {{ form.username.label }}<br>
             {{ form.username(size=32) }}
         </p>
