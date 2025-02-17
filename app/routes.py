@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-
+from app.forms import LoginForm
 """
 each app route describes what the server will send in response to a request including
 the path specified in the arguements.
@@ -43,4 +43,3 @@ Before /templates/ was created, this is what was on this page.
 def login():
     form = LoginForm()
     return render_template('login.html', title='Sign In', form=form)
-    
