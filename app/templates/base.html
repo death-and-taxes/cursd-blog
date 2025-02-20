@@ -10,11 +10,18 @@
     </head>
     <body>
 <!-- The following section is where other -->
+        <div>
+            Cursd-blog:
+            <a href = "{{ url_for('index') }}">Home</a>
+            <a href = "{{ url_for('login') }}">Login</a>
+        </div>
+<!--    Writing links directly in templates/source files makes reorganizing them tricky
+        Flask provides url_for(), which is able to more elegently map URLS
         <div>Cursd-blog: 
             <a href="/index">Home</a>
             <a href="/login">Login</a>
         </div>
-        
+--> 
         </div>
         <hr>
 <!-- 'With' construct assigns get_flashed_messages() -->
