@@ -3,7 +3,7 @@ from typing import Optional
 #sqlalchemy module includes general purpose db functions  and classes
 import sqlalchemy as sa 
 #sqlalchemy.orm provides support for using models
-import sqlalchem.orm as so
+import sqlalchemy.orm as so
 from app import db
 
 #class that represents users stored in database
