@@ -19,4 +19,5 @@ for sqlalchemy and flask-migrate
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+#models was added to define the structure of db and migrate
 from app import routes, models
