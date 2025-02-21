@@ -56,7 +56,9 @@ def login():
         #flashed messages do not magically appear, see base.html for how to layout flashed messages
         flash('Oh? {} you are trying to login, remember_me={}'.format(form.username.data, form.remember_me.data))
         #redirect automatically instructs the client to navigate back to the specified page
-        return redirect('/index')
+        #Older version, works with <a href="">
+        #return redirect('/index')
+        return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
 
 '''
