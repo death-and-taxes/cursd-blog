@@ -22,8 +22,9 @@ Forms run on Flask-WTF(see chapter 3 of miguel grinberg's microblog tutorial)
 Info:
 Flask
 Python 
-Flask-SQLAlchemy (Flask friendly for the SQLAlchemy package Object Relational Mapper)
-
+Database:
+    Flask-SQLAlchemy (Flask friendly for the SQLAlchemy package Object Relational Mapper)
+    Flask-Migrate(created by Grinberg, it's a Flask wrapper for Alembic, which is a data migration framework for SQLAlchemy)
 
 
 
