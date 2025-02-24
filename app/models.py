@@ -6,6 +6,10 @@ import sqlalchemy as sa
 import sqlalchemy.orm as so
 from app import db
 
+'''
+Use the WWW sql designer tool
+'''
+
 #class that represents users stored in database
 #inherits from db.Model, the base class for all models from Flask-SQLAlchemy
 class User(db.Model):
@@ -15,6 +19,9 @@ class User(db.Model):
     Those type declarations define the type of column, and make the values required or 'non-nullable'
     if you want a column to be optional, you use the 'Optional' helper, see password hash
     """
+    # so is sqlalchemy.orm
+    #fieldName: so.mapped[type]=so.mapped_column()
+    #Fields(id) are assigned a type(int) using Python type hints()
     id: so.Mapped[int] = so.mapped_column(primary_key=True)
     username: so.Mapped[str] = so.mapped_column(sa.String(64), index=True, unique=True)
     emai: so.Mapped[Optional[str]] = so.mapped_column(sa.String(256))
