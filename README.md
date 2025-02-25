@@ -35,3 +35,12 @@ Process for adding new features so far:
 3-add route configuration in routes.py
 4-add content to base.html
 
+
+Modifying Database
+1-if you modify models, you need to generate a new migration script via:
+$ flask db migrate
+2-next, add the migration script to git
+3-When ready, pull the migration script to the server/version you want to update
+4-upgrade using:
+$ flask db upgrade
+

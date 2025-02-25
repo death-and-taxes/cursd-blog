@@ -24,7 +24,7 @@ class User(db.Model):
     #Fields(id) are assigned a type(int) using Python type hints()
     id: so.Mapped[int] = so.mapped_column(primary_key=True)
     username: so.Mapped[str] = so.mapped_column(sa.String(64), index=True, unique=True)
-    emai: so.Mapped[Optional[str]] = so.mapped_column(sa.String(256))
+    email: so.Mapped[Optional[str]] = so.mapped_column(sa.String(256))
 
     password_hash: so.Mapped[Optional[str]] = so.mapped_column(sa.String(256))
 
